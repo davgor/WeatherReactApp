@@ -54,7 +54,7 @@ export default class FiveDayForecast extends Component {
     var day = ["Sun","Mon","Tue","Wen","Thu","Fri","Sat"];
     let date = new Date();
     let final = date.getDay() + dayOut;//the current day plus the day being rendered
-    if(final > 6){final - 7} //if that day is larger then six it subtracts 7 to get the final day
+    if(final > 6){final = final - 7} //if that day is larger then six it subtracts 7 to get the final day
     return day[final];//sends string back out
   }
     _loadInitialState = async () => {
